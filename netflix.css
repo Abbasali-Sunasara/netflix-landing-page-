@@ -1,0 +1,352 @@
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            width: 100%;
+            align-items: center;
+            z-index: 10; /* Keep navbar on top of other sections */
+        }
+
+        .logo {
+            width: 150px; /* Adjust the size if needed */
+        }
+
+        .logo:hover {
+            color: #f40612; /* Slightly lighter red */
+            transform: scale(1.1); /* Scale up by 10% */
+            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            margin-left: 15px;
+            cursor: pointer;
+            background-color: #e50914;
+            border-radius: 25px;
+        }
+
+        .language, .signin {
+            border-radius: 4px;
+            padding: 5px 15px;
+        }
+
+        /* .signin{
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        } */
+
+        /* Dropdown for language selector */
+        .language-select {
+            background-color: #141414;
+            border: 1px solid #fff;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .language-select:hover {
+            background-color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('./heroimg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.2%; /* Space on both sides of the hero */
+            border: 2px solid transparent;
+            border-radius: 50px;
+            background-clip: padding-box; /* Ensures border is outside of the padding */
+            border-image: linear-gradient(to top left, rgba(241, 239, 239, 0) 0%, rgb(190, 186, 186) 90%) 1; /* Fading border effect */
+        }
+
+        
+        .hero-overlay {
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 80%); /* Fade-out effect */
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #e50914;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .email-input {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            margin-right: 10px; /* Space between the input and the button */
+            width: 70%;
+        }
+
+        .email-input::placeholder {
+            color: #888;
+        }
+
+        /* Section Titles */
+        .section {
+            padding: 40px 5%;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .card {
+            flex: 0 0 150px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Sign In Button - White background with black text */
+        .signin {
+            background-color: white;
+            color: black;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+   /* More Reasons to Join Section */
+.reasons-to-join {
+    padding: 40px 5%;
+}
+
+.reasons-to-join h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.reason-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reason-cards .card {
+    flex: 1 1 30%; /* Adjusts card size based on available space */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.reason-cards .card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.reason-cards .card img {
+    width: 50px;
+    height: 50px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 40px 5%;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.faq-item:hover {
+    background-color: #444;
+}
+
+/* Hover effect on the question */
+.faq-item p {
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.faq-item:hover p {
+    color: white;  /* Change text color on hover */
+}
+
+.plus-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover .plus-icon {
+    transform: rotate(45deg); /* Optional: Rotate the plus icon on hover */
+}
+
+/* Hidden Answer Box - only show when parent is hovered */
+.answer {
+    display: none;
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Show answer on hover */
+.faq-item:hover .answer {
+    display: block;
+}
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #141414;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #e50914;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+  /* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for cards in More Reasons to Join section */
+.reasons-to-join .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Add hover effect to the images inside the cards */
+.card img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+    
+/* Trending Now Section */
+.section.trending .card-container {
+    display: flex;
+    gap: 10px;
+    overflow: auto; /* Allows scrolling but hides scrollbar */
+   overflow-y: hidden;
+}
+
+/* Only on Netflix Section */
+.section.exclusive .card-container {
+    display: flex;
+    gap: 10px;
+    overflow: auto; /* Allows scrolling but hides scrollbar */
+  overflow-y: hidden;
+}
+
+/* Hide scrollbars but allow scrolling */
+.section .card-container::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+.section .card-container {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
