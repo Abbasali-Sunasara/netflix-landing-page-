@@ -210,7 +210,7 @@
     height: 50px;
 }
 
-/* FAQ Section */
+
 .faq-section {
     padding: 40px 5%;
 }
@@ -237,16 +237,15 @@
     background-color: #444;
 }
 
-/* Hover effect on the question */
+
 .faq-item p {
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .faq-item:hover p {
-    color: white;  /* Change text color on hover */
+    color: white;  
 }
-
 .plus-icon {
     font-size: 1.5rem;
     color: white;
@@ -254,10 +253,10 @@
 }
 
 .faq-item:hover .plus-icon {
-    transform: rotate(45deg); /* Optional: Rotate the plus icon on hover */
+    transform: rotate(45deg); 
 }
 
-/* Hidden Answer Box - only show when parent is hovered */
+
 .answer {
     display: none;
     background-color: #444;
@@ -312,7 +311,7 @@ footer p {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-/* Hover effect for cards in More Reasons to Join section */
+
 .reasons-to-join .card:hover {
     transform: scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
@@ -341,7 +340,7 @@ footer p {
   overflow-y: hidden;
 }
 
-/* Hide scrollbars but allow scrolling */
+
 .section .card-container::-webkit-scrollbar {
     display: none; /* Hides the scrollbar */
 }
